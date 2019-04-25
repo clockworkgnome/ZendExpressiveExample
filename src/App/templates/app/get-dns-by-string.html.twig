@@ -1,0 +1,15 @@
+{% extends '@layout/default.html.twig' %}
+{% block content %}
+<!-- twig -->
+<h1>Get DNS of URL's</h1>
+<form>
+  <div class="form-group">
+    <label for="urls_to_process">Please enter a comma seperated list of URL's</label>
+    <input type="text" class="form-control" id="urls_to_process" placeholder="www.example1.com,www.example2.com,...">
+  </div>
+ <button type="submit" class="btn btn-primary" onclick="processURLS()">Process</button>
+</form>
+<div id="myDNSResults">
+</div>
+<script src="{{ asset('assets/js/urlProcessor.js', version=3) }}"></script>
+{% endblock %}
